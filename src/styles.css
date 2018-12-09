@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+
+  background: #fafafa;
+}
+
+
+#editor[_ngcontent-c1] {
+
+  background-color: white;
+}
+
+
+.angular-editor-toolbar[_ngcontent-c2] {
+
+  background-color: white !important;
+}
