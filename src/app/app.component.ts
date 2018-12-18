@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { AngularEditorConfig } from '@kolkov/angular-editor';
+import {Component} from '@angular/core';
+import {AngularEditorConfig} from '@kolkov/angular-editor';
 
 
 @Component({
@@ -10,7 +10,13 @@ import { AngularEditorConfig } from '@kolkov/angular-editor';
 export class AppComponent {
 
 
-  name = 'Angular 6';
+  commingSoon(): void {
+
+    alert('Comming Soon');
+  }
+
+
+  name = 'Signzy Assignment';
   htmlContent = '';
 
   config: AngularEditorConfig = {
@@ -22,18 +28,18 @@ export class AppComponent {
     translate: 'no',
     customClasses: [
       {
-        name: "quote",
-        class: "quote",
+        name: 'quote',
+        class: 'quote',
       },
       {
         name: 'redText',
         class: 'redText'
       },
       {
-        name: "titleText",
-        class: "titleText",
-        tag: "h1",
+        name: 'titleText',
+        class: 'titleText',
+        tag: 'h1',
       },
     ]
-  }
+  };
 }

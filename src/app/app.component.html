@@ -1,37 +1,57 @@
+<!--Toolbar-->
+<mat-toolbar style="background-color: white">
+  <mat-toolbar-row>
+    <div class="nav">
+      <img src="assets/docs_image.png" style="float: left">
+      <div class="navbar-header">
+        <a class="navbar-brand" style="color: darkgrey;font-style: italic"  href="#">Untitled Document</a>
+      </div>
+
+      <button mat-button [matMenuTriggerFor]="file">File</button>
+
+      <mat-menu #file="matMenu">
+        <button mat-menu-item (click)="commingSoon()">Share</button>
+        <button mat-menu-item [matMenuTriggerFor]="new">New</button>
+        <button mat-menu-item [matMenuTriggerFor]="download_as">Download As</button>
+
+      </mat-menu>
+      <mat-menu #new="matMenu">
+        <button mat-menu-item (click)="commingSoon()" >Documents</button>
+      </mat-menu>
+      <mat-menu #download_as="matMenu">
+        <button mat-menu-item (click)="commingSoon()" >Microsoft Word (.docx)</button>
+        <button mat-menu-item  (click)="commingSoon()">PDF document (.pdf)</button>
+        <button mat-menu-item (click)="commingSoon()">Text Document (.txt)</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="edit">Edit</button>
+      <mat-menu #edit="matMenu">
+        <button mat-menu-item (click)="commingSoon()">Copy     (Ctrl + C)</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="view">View</button>
+      <mat-menu #view="matMenu">
+        <button mat-menu-item (click)="commingSoon()">Full Screen</button>
+      </mat-menu>
+    </div>
+
+    <div id="image">
+
+    <img src="assets/profile_pic.png" style="width: 48px" height="48px">
+
+    </div>
+
+  </mat-toolbar-row>
+
+
+
+
+</mat-toolbar>
+
+
+<!--Editor-->
 <div class="container">
-
-
-
   <div class="middle">
-
-
-
-
-      <angular-editor  [(ngModel)]="htmlContent" [config]="config"></angular-editor>
-
-
-
-
-
+    <angular-editor style="background-color: white"  [(ngModel)]="htmlContent" [config]="config"></angular-editor>
   </div>
-
-
-
-
-
-
-
-
-  <!--<h5 class="html-header">HTML Output</h5>-->
-<!--  <div class="html">
-    {{ htmlContent }}
-  </div>-->
-<!--  <p>
-    NPM package is here:
-    <a href="https://www.npmjs.com/package/@kolkov/angular-editor">https://www.npmjs.com/package/@kolkov/angular-editor</a>
-  </p>-->
-<!--  GitHub repo is here:
-  <a href="https://github.com/kolkov/angular-editor">https://github.com/kolkov/angular-editor</a>-->
 </div>
 
 
